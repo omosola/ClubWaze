@@ -1,0 +1,14 @@
+{
+    "applications": {
+        "_default": {
+            "link": "barhop"
+        }, 
+        "barhop": {
+            "applicationId": "gu19AcrasUTI2OpNDzU3uooPniNnpec74nUKoUcx", 
+            "masterKey": "DhPWitTBcINIGoyIgXnaA75Hc8uzsRMnWw9liP2B"
+        }
+    }, 
+    "global": {
+        "parseVersion": "1.2.12"
+    }
+}
