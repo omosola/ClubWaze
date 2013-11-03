@@ -80,7 +80,15 @@ html, body {
 }
 
 .green-bg {
-	background-color: green;
+	background-color: rgba(40,180,141,1);
+}
+
+.pink-bg {
+	background-color: pink;
+}
+
+.blue-bg {
+	background-color: blue;
 }
 
 .edit .rating {
