@@ -23,15 +23,17 @@
 
     render: function() {
       console.log(this);
-      var colors = ['rgba(52, 152, 219, 0.65)', 'rgba(231, 76, 60, 0.65)'];
+      // 
+      var colors = ['rgba(52, 152, 219, 0.65)', 'rgba(154, 204, 237, 0.65)',  'rgba(243, 158, 166, 0.65)','rgba(182, 22, 34, 0.65)'];
       var rating = this.options.rating;
       if (typeof(rating) == "undefined") {
         rating = 2; 
       }
-      var colorNum = rating*10 %2 ;
+      var colorNum = Math.round((Math.random()*(colors.length - 1)));
+      console.log(colorNum);
       var name = this.options.name;
-      if (name.length > 28) {
-        name = name.substring(0,28) + '...';
+      if (name.length > 16) {
+        name = name.substring(0,15) + '...';
       }
       return this.template({id: this.options.id, name: name, dist: this.options.dist, color:colors[colorNum]});
     },
