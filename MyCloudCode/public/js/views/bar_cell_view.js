@@ -32,8 +32,8 @@
       var colorNum = Math.round((Math.random()*(colors.length - 1)));
       console.log(colorNum);
       var name = this.options.name;
-      if (name.length > 25) {
-        name = name.substring(0,25) + '...';
+      if (name.length > 19) {
+        name = name.substring(0,18) + '...';
       }
       return this.template({id: this.options.id, name: name, dist: this.options.dist, color:colors[colorNum]});
     },
