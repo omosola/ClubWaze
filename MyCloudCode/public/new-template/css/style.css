@@ -62,8 +62,33 @@ html, body {
 	border: 2px solid #eee;
 	background-color: rgba(255,255,255,0.7);
 
+	font-size: 20px;
 	text-align: center;
-	
+	line-height: 70px;
+
+	position: relative;
+}
+
+.rating .stat-bar {
+	width: 50%;
+	height: 100%;
+}
+
+.rating .description {
+	position: absolute;
+	left: 25%;
+}
+
+.green-bg {
+	background-color: rgba(40,180,141,1);
+}
+
+.pink-bg {
+	background-color: pink;
+}
+
+.blue-bg {
+	background-color: blue;
 }
 
 .edit .rating {
