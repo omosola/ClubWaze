@@ -111,7 +111,7 @@ body {
   height: 100%;
   width: 100%;
   position: relative;
-  background: url(../img/bg-transparent.jpg) no-repeat center center fixed;
+  background: url(../img/bg.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -199,22 +199,3 @@ i.service-icon:hover {
 footer {
   padding: 100px 0;
 }
-
-
-/* Bar Cells */
-
-.cellDist {
-  color: #333;
-  float:right;
-  font-size: 24px;
-  margin-right: 10px;
-}
-
-.cellName {
-  color:#333;
-  font-size: 18px;
-  float:left;
-  margin-left:10px;
-}
-
-

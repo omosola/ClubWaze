@@ -5,6 +5,10 @@ html, body {
 
 /* barinfo css */
 
+.header {
+	background: url(''); 
+}
+
 #top {
 	height: 100%;
 }
@@ -18,7 +22,6 @@ html, body {
 	font-family: 'Lato', sans-serif;
 	color: rgba(20,20,20,0.9);
 	text-transform: uppercase;
-	/*background-color: rgba(255,255,255,0.3);	*/
 }
 
 .bar-info {
@@ -124,7 +127,7 @@ span.bigstars {
 }
 
 span.bigstars span.rateit-range {
-	background: url('../img/star-filled44.png');
+	background: url('../img/star-filled-silver-44.png');
 	height: 44px;
 }
 span.bigstars span.rateit-hover {

@@ -13,7 +13,7 @@
     },
 
 
-    template: _.template("<a href='barinfo.html?id=<%=id%>'><div class='bar-info'> <div> <%=name%> </div> <div> <%=dist%> </div> </div></a>"),
+    template: _.template("<a href='barinfo.html?id=<%=id%>'><div class='bar-info' style='background-color:<%=color%>'> <div class='cellName'> <%=name%> </div> <div class='cellDist'> <%=dist%> </div> </div></a>"),
 
 
     initialize: function(){
@@ -23,7 +23,17 @@
 
     render: function() {
       console.log(this);
-      return this.template({id: this.options.id, name: this.options.name, dist: this.options.dist});
+      var colors = ['rgba(52, 152, 219, 0.65)', 'rgba(231, 76, 60, 0.65)'];
+      var rating = this.options.rating;
+      if (typeof(rating) == "undefined") {
+        rating = 2; 
+      }
+      var colorNum = rating*10 %2 ;
+      var name = this.options.name;
+      if (name.length > 35) {
+        name = name.substring(0,35) + '...';
+      }
+      return this.template({id: this.options.id, name: name, dist: this.options.dist, color:colors[colorNum]});
     },
 
 
