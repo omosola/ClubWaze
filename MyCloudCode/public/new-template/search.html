@@ -34,6 +34,8 @@
     <script>
       var DP;
       $(function() {
+        setTimeout(function() {window.scrollTo(0, 1)}, 100);
+
         DP = new window.DataProvider();
         DP.getBarsNearGeolocation(null, callback);
         $('.fade-trigger').hide();
