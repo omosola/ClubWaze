@@ -23,14 +23,17 @@
 
     render: function() {
       console.log(this);
-      var colors = ['rgba(65,100,255,0.5)', 'rgba(255,69,0,0.5)'];
+      var colors = ['rgba(52, 152, 219, 0.8)', 'rgba(231, 76, 60, 0.8)'];
       var rating = this.options.rating;
       if (typeof(rating) == "undefined") {
         rating = 2; 
       }
       var colorNum = rating*10 %2 ;
-      console.log(colorNum);
-      return this.template({id: this.options.id, name: this.options.name, dist: this.options.dist, color:colors[colorNum]});
+      var name = this.options.name;
+      if (name.length > 35) {
+        name = name.substring(0,35) + '...';
+      }
+      return this.template({id: this.options.id, name: name, dist: this.options.dist, color:colors[colorNum]});
     },
 
 
