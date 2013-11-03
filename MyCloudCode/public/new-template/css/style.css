@@ -27,7 +27,7 @@ html, body {
 }
 
 .bar-info .title {
-	font-size: 2em;
+	font-size: 1.5em;
 }
 
 .bar-info .photo {
@@ -46,6 +46,7 @@ html, body {
 .bar-info .details {
 	float: left;
 	width: 70%;
+	font-size: 1em;
 }
 
 .ratings {
