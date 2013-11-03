@@ -1,5 +1,4 @@
 (function () {
-  "use strict";
   window.BarCellView = Backbone.View.extend({
 
     defaults: {
@@ -13,12 +12,7 @@
       bars: null,
     },
 
-    template: _.template("
-        <div class='bar-info'>
-          <div> Name </div>
-          <div> dist </div>
-        </div>
-      "),
+    template: _.template(" <div class='bar-info'> <div> Name </div> <div> dist </div> </div>"),
 
 
     initialize: function(){

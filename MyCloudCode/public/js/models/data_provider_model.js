@@ -1,5 +1,4 @@
 (function () {
-  "use strict";
   window.DataProvider = Backbone.Model.extend({
 
     defaults: {

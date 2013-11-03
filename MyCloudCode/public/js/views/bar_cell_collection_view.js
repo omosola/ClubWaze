@@ -1,27 +1,47 @@
-(function () {
-  "use strict";
+$(function () {
   window.BarCellCollectionView = Backbone.View.extend({
+
     el:"#bar-info-container" ,
 
-    initialize: function(){
-      this._barCellViews = [];
-      this.collection.each(function(bar) {
-        that._barCellViews.push(bar);
-      });
+
+
+    initialize: function(bars){
     },
 
     render: function() {
-      var that = this;
-      // Clear out this element.
-      $(this.el).empty();
+      
+            // Clear out this element.
+      console.log(this.$el);
+      this.$el.empty();
    
       // Render each sub-view and append it to the parent view's element.
-      _(this._barCellViews).each(function(bcv) {
-        $(that.el).append(bcv.render().el);
-      });
+      console.log("this");
+      console.log(this);
+      console.log(this.collection);
+      
+      var that = this;
+      console.log(this.$el);
+      console.log(this.collection);
+
+      for(var i=0; i < this.collection.length; i++) {
+        var bc = this.collection[i];
+        console.log(that);
+        var bcv = new window.BarCellView(bc);
+        console.log(bcv.render());
+        that.$el.append(bcv.render());
+      } 
+
+
+      // _(this.collection).each(function(bc) {
+      //   console.log(that);
+      //   var bcv = new window.BarCellView(bc);
+      //   that.$el.append(bcv.render().el);
+      // });
+      console.log(this.$el);
+      debugger
     },
 
 
   });
 
-}());
+}); 
