@@ -221,21 +221,22 @@ footer {
   float: right;
   color: #fff;
   opacity: 1;
-  font-size: 15px;
+  font-size: 12px;
   margin-right: 10px;
   text-transform: uppercase;
-
 
 }
 
 #vybers-container {
   height: 30px;
+  margin-left: -1%;
+  width: 102%;
   line-height: 30px;
-  background-color: #f1c40f;
+  background-color: #ffd801;
   background-repeat: repeat-x;
-  -webkit-box-shadow: 1px 1px 11px rgba(50, 50, 50, 0.75);
-  -moz-box-shadow:    1px 1px 11px rgba(50, 50, 50, 0.75);
-  box-shadow:         1px 1px 11px rgba(50, 50, 50, 0.75);
+  -webkit-box-shadow: 3px 1px 11px rgba(50, 50, 50, 0.75);
+  -moz-box-shadow:    3px 1px 11px rgba(50, 50, 50, 0.75);
+  box-shadow:         3px 1px 11px rgba(50, 50, 50, 0.75);
 
   opacity: .8;
 }

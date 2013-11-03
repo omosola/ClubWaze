@@ -110,6 +110,10 @@
 	line-height: 60px;
 }
 
+.bar-info:first {
+	border: none;
+}
+
 .bar-info:hover {
 	background-color: rgba(155,155,155,0.8);
 }
@@ -122,6 +126,8 @@
   right: 10px;
   font-size: 20px;
 }
+
+
 
 .cellName {
   color: #333;
