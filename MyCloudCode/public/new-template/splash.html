@@ -29,17 +29,21 @@
               <li><a href="#">Login</a></li>
               <li><a href="#">Search</a></li>
               <li><a href="#">About</a></li>
+              <li><a href="#">Team</a></li>
           </ul>
       </div>
-      <a href="" class="menu-toggle">
+      <a href="" class="menu-toggle fade-trigger">
         <div class="beer-menu-icon">
         </div>
       </a>
-      <div class="vert-text">
+      <div class="vert-text fade-trigger">
         <h1 id="title"><a href="search.html">BarHop</a></h1>
         <!--<h3>Find the best bars, the first time</h3>-->
-        <div class="splash-search">
+        <!--<div class="splash-search">
           <input type="text" placeholder="Enter an Address"></input>
+        </div>-->
+        <div class="tagline">
+          Find the right bar
         </div>
       </div>
     </div>
@@ -50,31 +54,15 @@
   <script src="http://codeorigin.jquery.com/jquery-2.0.3.min.js"></script>
   <script src="js/bootstrap.js"></script>
 
-  <!-- Custom JavaScript for the Side Menu - Put in a custom JS file if you want to clean this up -->
-  <script> 
-    $("a.menu-toggle").click(function(e) {
-      e.preventDefault();
-      $("#menu").slideToggle(600);
-    });
-  </script>
   <script>
-    $(function() {
-        $('a[href*=#]:not([href=#])').click(function() {
-          if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') 
-              || location.hostname == this.hostname) {
+   setTimeout(function() {
+      $('.fade-trigger').fadeOut(1500, newpage);
+   }, 1500);
 
-            var target = $(this.hash);
-            target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-            if (target.length) {
-              $('html,body').animate({
-                scrollTop: target.offset().top
-              }, 1000);
-              return false;
-            }
-          }
-        });
-      });
-    </script>
+   function newpage() {
+      window.location = "search.html";
+   }
+  </script>
 
   </body>
 

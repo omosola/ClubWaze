@@ -36,9 +36,8 @@
       $(function() {
         DP = new window.DataProvider();
         DP.getBarsNearGeolocation(null, callback);
-
-
-
+        $('.fade-trigger').hide();
+        $('.fade-trigger').fadeIn(1500);
       });
 
       function callback(results, status) {
@@ -57,14 +56,12 @@
 
     <!-- Full Page Image Header Area -->
     <div id="top" class="header search">
-      <div class="searchbox">
-          <input type="text" class="form-control" placeholder="Location" />
+      <div class="searchbox fade-trigger">
+          <input type="text" class="form-control" placeholder="Search by Address"></input>
       </div>
-      <div id="map">
+      <div id="map" class="fade-trigger">
       </div>
-      <div id="bar-info-container" >
-
-
+      <div id="bar-info-container" class="fade-trigger">
       </div>
     </div>
     <!-- /Full Page Image Header Area -->
@@ -73,10 +70,6 @@
   <!-- Placed at the end of the document so the pages load faster -->
   <script src="http://codeorigin.jquery.com/jquery-2.0.3.min.js"></script>
   <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.1/js/bootstrap.min.js"></script>
-
-  <script>
-      $(".searchbox input[type=text]").focus();
-  </script>
   </body>
 
 </html>
