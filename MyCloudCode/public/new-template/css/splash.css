@@ -12,10 +12,15 @@
 	color: rgba(255,255,255,0.8);
 }
 
-h3 {
+.codystar {
+	font-family: 'CodyStar', cursive;
+}
+
+.tagline {
 	font-family: 'Lato', sans-serif;
 	font-weight: 300;
-	margin-top: 5px;
+	font-size: 20px;
+	text-transform: uppercase;
 	color: rgba(255,255,255,0.8);
 }
 
