@@ -23,7 +23,7 @@
 
     render: function() {
       console.log(this);
-      var colors = ['rgba(52, 152, 219, 0.8)', 'rgba(231, 76, 60, 0.8)'];
+      var colors = ['rgba(52, 152, 219, 0.65)', 'rgba(231, 76, 60, 0.65)'];
       var rating = this.options.rating;
       if (typeof(rating) == "undefined") {
         rating = 2; 
