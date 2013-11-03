@@ -56,7 +56,7 @@
         bar.set("address", cur['vicinity']);
         var photo = "https://cbks1.google.com/cbk?output=thumbnail&amp;cb_client=maps_sv&amp;thumb=2&amp;thumbfov=100&amp;ll=37.444870,-122.161514&amp;panoid=wt8GV462yvSiMGF6aQLAww&amp;yaw=45.8&amp;pitch=7.4&amp;thumbpegman=1&amp;w=300&amp;h=118" 
         bar.set("photo", photo);
-        debugger;
+        //debugger;
         bar.save(null, {
           success: function(rating) {
             // Execute any logic that should take place after the object is saved.
@@ -115,12 +115,12 @@
       rating.save(null, {
           success: function(rating) {
             // Execute any logic that should take place after the object is saved.
-            alert('New object created with objectId: ' + rating.id);
+            //alert('New object created with objectId: ' + rating.id);
           },
           error: function(rating, error) {
             // Execute any logic that should take place if the save fails.
             // error is a Parse.Error with an error code and description.
-            alert('Failed to create new object, with error code: ' + error.description);
+            //alert('Failed to create new object, with error code: ' + error.description);
           }
       });
 
@@ -159,11 +159,10 @@
         success: function(object) {
           barWithRating.rating = object;
 
-          alert(object.id + ' - ' + object.get('barId'));
           callbackWithBarRating(barWithRating);
         },
         error: function(error) {
-          alert("Error: " + error.code + " " + error.message);
+          //alert("Error: " + error.code + " " + error.message);
         }
       });
     },
