@@ -1,4 +1,10 @@
-/* Splas.HTML */
+/* Splash.HTML */
+
+.header.splash {
+	/* use fully opaque image for the splash page */
+	background: url('../img/bg.jpg') no-repeat center center fixed;
+}
+
 #title {
 	font-family: 'CodyStar', cursive;
 	font-size: 5em;
