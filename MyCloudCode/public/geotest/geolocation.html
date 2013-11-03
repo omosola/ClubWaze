@@ -13,6 +13,9 @@
     // device APIs are available
     //
     function onDeviceReady() {
+        var element = document.getElementById('progress');
+        element.innerHTML = 'Trying' + '<br />';
+
         navigator.geolocation.getCurrentPosition(onSuccess, onError);
     }
 
@@ -41,5 +44,6 @@
   </head>
   <body>
     <p id="geolocation">Finding geolocation...</p>
+    <p id="progress"></p>
   </body>
 </html>
