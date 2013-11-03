@@ -48,7 +48,7 @@ hello world
 				var bars = dpObject.getBarsNearGeolocation();
 
 				// test with the 2nd object
-				if (bars.length > 2) {
+				if (bar != 'undefined' && bars.length > 2) {
 					testDataAPI(bars[1]);
 				}
 	        }
