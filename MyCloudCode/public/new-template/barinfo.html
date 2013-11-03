@@ -64,10 +64,10 @@
        $('#address').html(barRating.bar.vicinity);
        $('#barPhoto').attr('src', pics[barRating.bar.rating *10 %6]);
 
-       //$('#genderRatio').rateit('data-rateit-value', barRating.rating.attributes.genderRatio);
+       $('#genderRatio').rateit('value', barRating.rating.attributes.genderRatio);
        //$('#coverCharge').rateit('data-rateit-value', barRating.rating.attributes.coverCharge);
        //$('#atmosphere').rateit('data-rateit-value', barRating.rating.attributes.atmosphere);
-       //$('#busyness').rateit('data-rateit-value', barRating.rating.attributes.busyness);
+       $('#busyness').rateit('value', barRating.rating.attributes.busyness);
        //$('#entryLine').rateit('data-rateit-value', barRating.rating.attributes.entryLine);
        //$('#attractiveness').rateit('data-rateit-value', barRating.rating.attributes.attractiveness);
        //$('#peopleDancing').rateit('data-rateit-value', barRating.rating.attributes.peopleDancing);
@@ -113,19 +113,19 @@
         <div class="ratings">
           <div class="rating">
             <div class="description">
-              <span id='genderRatio' class="rateit bigstars" data-rateit-starwidth="44" data-rateit-starheight="44" data-rateit-step="1" data-rateit-value="4" data-rateit-ispreset="true" data-rateit-readonly="true">
+              <span id='genderRatio' class="rateit bigstars" data-rateit-starwidth="44" data-rateit-starheight="44" data-rateit-step="1" data-rateit-value="0" data-rateit-ispreset="true" data-rateit-readonly="true">
               </span>
             </div>
           </div>
-          <div id="atmosphere"class="rating">
+          <div class="rating">
             <div class="description">
-              <span class="rateit bigstars" data-rateit-starwidth="44" data-rateit-starheight="44" data-rateit-step="1" data-rateit-value="4" data-rateit-ispreset="true" data-rateit-readonly="true">
+              <span id="atmosphere" class="rateit bigstars" data-rateit-starwidth="44" data-rateit-starheight="44" data-rateit-step="1" data-rateit-value="4" data-rateit-ispreset="true" data-rateit-readonly="true">
               </span>
             </div>
           </div>
-          <div id="coverCharge" class="rating">
+          <div class="rating">
             <div class="description">
-              <span class="rateit bigstars" data-rateit-starwidth="44" data-rateit-starheight="44" data-rateit-step="1" data-rateit-value="0" data-rateit-ispreset="true" data-rateit-readonly="true">
+              <span id="coverCharge" class="rateit bigstars" data-rateit-starwidth="44" data-rateit-starheight="44" data-rateit-step="1" data-rateit-value="0" data-rateit-ispreset="true" data-rateit-readonly="true">
               </span>
             </div>
           </div>
@@ -135,21 +135,21 @@
               </span>
             </div>
           </div>
-          <div id="entryLine" class="rating">
+          <div class="rating">
             <div class="description">
-              <span class="rateit bigstars" data-rateit-starwidth="44" data-rateit-starheight="44" data-rateit-step="1" data-rateit-value="2" data-rateit-ispreset="true" data-rateit-readonly="true">
+              <span id="entryLine" class="rateit bigstars" data-rateit-starwidth="44" data-rateit-starheight="44" data-rateit-step="1" data-rateit-value="2" data-rateit-ispreset="true" data-rateit-readonly="true">
               </span>
             </div>
           </div>
-          <div id="attractiveness"class="rating">
+          <div class="rating">
             <div class="description">
-              <span class="rateit bigstars" data-rateit-starwidth="44" data-rateit-starheight="44" data-rateit-step="1" data-rateit-value="4" data-rateit-ispreset="true" data-rateit-readonly="true">
+              <span id="attractiveness" class="rateit bigstars" data-rateit-starwidth="44" data-rateit-starheight="44" data-rateit-step="1" data-rateit-value="4" data-rateit-ispreset="true" data-rateit-readonly="true">
               </span>
             </div>
           </div>
-          <div id="peopleDancing"class="rating">
+          <div class="rating">
             <div class="description">
-              <span class="rateit bigstars" data-rateit-starwidth="44" data-rateit-starheight="44" data-rateit-step="1" data-rateit-value="3" data-rateit-ispreset="true" data-rateit-readonly="true">
+              <span id="peopleDancing" class="rateit bigstars" data-rateit-starwidth="44" data-rateit-starheight="44" data-rateit-step="1" data-rateit-value="3" data-rateit-ispreset="true" data-rateit-readonly="true">
               </span>
             </div>
           </div>
