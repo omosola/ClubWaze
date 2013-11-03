@@ -17,12 +17,13 @@ $(function () {
 
       
       var that = this;
-
+      var num = 0;
 
       for(var i=0; i < this.collection.length; i++) {
         var bc = this.collection[i];
-        var num = new Number(Math.random() * 5);
+        num += new Number(Math.random());
         bc.dist=num.toPrecision(2);
+        if (bc.dist < 1) bc.dist = num.toPrecision(1);
         var bcv = new window.BarCellView(bc);
         that.$el.append(bcv.render());
       } 

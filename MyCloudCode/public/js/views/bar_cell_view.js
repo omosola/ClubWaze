@@ -13,7 +13,7 @@
     },
 
 
-    template: _.template("<a href='barinfo.html?id=<%=id%>'><div class='bar-info' style='background-color:<%=color%>'> <div> <%=name%> </div> <div> <%=dist%> </div> </div></a>"),
+    template: _.template("<a href='barinfo.html?id=<%=id%>'><div class='bar-info' style='background-color:<%=color%>'> <div class='cellName'> <%=name%> </div> <div class='cellDist'> <%=dist%> </div> </div></a>"),
 
 
     initialize: function(){
