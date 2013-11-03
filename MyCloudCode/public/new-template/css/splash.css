@@ -1,70 +1,33 @@
-/*html {
-	width: 100%;
-	height: 100%;
-}
-
-body {
-	background: url('http://designmodo.com/wp-content/uploads/2012/10/Blurred-Backgrounds-23.jpg');
-	background-size: cover;
-	width: 100%;	
-	height: 100%;
-	margin: 0;
-}
-
-header {
-	width: 100%;
-	height: 10%;
-	color: white;
-}
-
-menu {
-
-}
-
-.title {
+#title {
 	font-family: 'Chelsea Market', cursive;
-	padding-top: 50%;
+	
 	font-size: 5em;
 }
 
-section {
-	padding-top: 20px;
-	padding-bottom: 20px;
-}
+/* Search.HTML */
 
-#splash-image {
-	width: 50px;
-	height: 50px;
-}
-
-footer{
-	width: 100%;
-	height: 8%;
-}*/
-
-.title {
-	font-family: 'Chelsea Market', cursive;
-	padding-top: 50%;
-	font-size: 5em;
+.header.search {
+	padding: 20px;
 }
 
 .searchbox input[type='text'] {
 	background: rgba(255,255,255,0.5);
 	height: 50px;
+	margin-bottom: 20px;
 }
 
 #map {
 	background: url('http://www.developer.com/imagesvr_ce/7616/GoogleMapsMarker_figure1.png');
-	background-size: 100% 100px;
+	background-size: 100% 120px;
 	opacity: 0.9;
 	width: 100%;
-	height: 100px;
+	height: 120px;
 	margin: 0;
 }
 
 .bar-info {
 	width: 100%;
-	height: 50px;
+	height: 60px;
 	background: rgba(255,255,255,0.3);
 	border: 1px solid black;
 }
