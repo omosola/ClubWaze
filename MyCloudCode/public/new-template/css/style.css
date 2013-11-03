@@ -1,0 +1,73 @@
+html, body {
+	width: 100%;
+	height: 100%;
+}
+
+/* barinfo css */
+
+#top {
+	height: 100%;
+}
+
+.content {
+	margin-left: auto;
+	margin-right: auto;
+	padding: 10px;
+	height: 100%;
+	width: 86%;
+	background-color: rgba(255,255,255,0.3);	
+}
+
+.bar-info {
+	overflow: hidden;
+}
+
+.bar-info .title {
+	font-size: 2em;
+}
+
+.bar-info .photo {
+	float: right;
+	width: 30%;
+}
+
+.bar-info .photo img {
+	margin-right: 20px;
+	width: 100%;
+	height: 100%;
+	min-height: 130px;
+	background-color: rgba(0,0,0,0.2);
+}
+
+.bar-info .details {
+	float: left;
+	width: 70%;
+}
+
+.ratings {
+	width: 100%;
+	margin-top: 20px;
+	overflow: auto;
+}
+
+.rating {
+	width: 100px;
+	height: 100px;
+	margin-left: 40px;
+	margin-bottom: 25px;
+	float: left;
+	border: 2px solid #eee;
+}
+
+.clearfix {
+	clear: both;
+}
+
+.checkin {
+	height: 50px;
+	width: 80%;
+	background-color: blue;
+	opacity: 0.3;
+	color: white;
+	border-radius: 7px;
+}

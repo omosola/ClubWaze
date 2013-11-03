@@ -2,7 +2,6 @@ Hello World
 Hey!
 <div>
   Template Page Ideas:<br />
-  <a href="new-template/splash.html">New Pages</a>
   <a href="splash.html">Splash Page</a><br />
   <a href="search.html">Search Page</a><br />
   <a href="rating.html">Rating Page</a><br />
