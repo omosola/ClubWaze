@@ -8,5 +8,5 @@
 </div>-->
 
 <script>
-  window.location = "new-template/splash.html";
+  window.location.href = "new-template/splash.html";
 </script>
