@@ -16,10 +16,41 @@ hello world
 
 
 
+        function testDataAPI(bar) {
+			var attrs = {};
+			attrs.barId = bar.id;
+
+			var barRating = dpObject.getBarObjectForId(attrs);
+			if (barRating == null) {
+				return;
+			}
+			console.log("before adding rating");
+			console.log("barRating: " + barRating);
+
+			var rating = {};
+			rating.barId = bar.id;
+			rating.genderRatio = 2;
+			rating.coverCharge = 0;
+			rating.attractiveness = 3;
+			dpObject.saveRating(rating);
+			
+			var barRating = dpObject.getBarObjectForId(attrs);
+			if (barRating == null) {
+				return;
+			}
+			console.log("after adding rating");
+			console.log("barRating: " + barRating);
+		}
+
         function codeAddress() {
 				console.log("in javascript");
 				var dpObject = new window.DataProvider();
-				dpObject.getBarsNearGeolocation();
+				var bars = dpObject.getBarsNearGeolocation();
+
+				// test with the 2nd object
+				if (bar != 'undefined' && bars.length > 2) {
+					testDataAPI(bars[1]);
+				}
 	        }
         window.onload = codeAddress;
 

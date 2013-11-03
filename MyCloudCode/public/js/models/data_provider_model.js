@@ -59,8 +59,6 @@
       //rating.set("barId", attrs.barId);
       //if (attrs.genderRatio != null)
       //    rating.set("genderRatio", attrs.genderRatio);
-      //if (attrs.coverCharge != null)
-      //    rating.set("coverCharge", attrs.coverCharge);
       //if (attrs.attractiveness != null)
       //    rating.set("attractiveness", attrs.attractiveness);
       //if (attrs.peopleDancing != null)
@@ -71,6 +69,8 @@
       //    rating.set("busyness", attrs.busyness);
       //if (attrs.entryLine != null)
       //    rating.set("entryLine", attrs.entryLine);
+      //if (attrs.coverCharge != null)
+      //    rating.set("coverCharge", attrs.coverCharge);
 
       if (jsonRating != null) {
         rating.save(jsonRating);
@@ -82,6 +82,26 @@
       barWithRating.bar = null;
       barWithRating.rating = null;
 
+      var barList =  this.get('bars');
+      for (var i = 0; i < barList.length; i++) { 
+        var bar = barList[i];
+        if (bar.id == attrs.barId) {
+          barWithRating.bar = bar;
+          break;
+        }
+      }
+
+      var Rating = Parse.Object.extend("Rating");
+      query = new Parse.Query(Rating);
+      query.first({
+        success: function(object) {
+          barWithRating.rating = object;
+        },
+        error: function(error) {
+        }
+      });
+
+      return barWithRating;
     },
 
     //private methods
