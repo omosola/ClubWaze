@@ -16,36 +16,11 @@
       Parse.$ = jQuery;
 
       // Initialize Parse with your Parse application javascript keys
-      Parse.initialize("XkIQ36SN2LMpaSSQX2fMOLjqHP5PT72JFQ5nizHD",
-                       "EHgttht5UQd9XvvFHjIfy4XgVPKcVRFPd5zDcV0X");
+      Parse.initialize("gu19AcrasUTI2OpNDzU3uooPniNnpec74nUKoUcx",
+                       "GDkZhESUr5x1RqZhZwIX8aZfPS6PLX2PE8mD6D84");
 },
 
 
-
-/*
-    getBarsNearGeolocation: function (attrs) {
-      //TODO: we are seeding latitude and longitude
-      var url = 'https://maps.googleapis.com/maps/api/place/nearbysearch/json?location='+this.get('latitude')+','+this.get('longitude')+'&radius=5000&types=bar&sensor=true&key='+this.get('googleAPIKey');
-
-      var result = "";
-
-      $.ajax({
-        type: 'GET',
-        url: url,
-        dataType: 'json',
-        success: function(r) { 
-          result = r;
-        },
-        data: {},
-        async: false
-       });
-      this.set('bars', result['results'])
-      return this.get('bars');
-    },
-*/
-    // getDummyBar: function() {
-    //   //return 
-    // }
 
     getBarsNearGeolocation: function (attrs, callback) {
       var map;
@@ -67,6 +42,37 @@
 
       service = new google.maps.places.PlacesService(map);
       service.nearbySearch(request, callback);
+
+    },
+
+    saveBarsToParse: function () {
+      var Bar = Parse.Object.extend("Bar");
+
+      for (var i=0; i < this.get("bars").length; i++) {
+        var cur = this.get("bars")[i];
+        var bar = new Bar();
+        bar.set("name", cur['name']);
+        bar.set("googleId", cur['id']);
+        bar.set("address", cur['vicinity']);
+        var photo = "https://cbks1.google.com/cbk?output=thumbnail&amp;cb_client=maps_sv&amp;thumb=2&amp;thumbfov=100&amp;ll=37.444870,-122.161514&amp;panoid=wt8GV462yvSiMGF6aQLAww&amp;yaw=45.8&amp;pitch=7.4&amp;thumbpegman=1&amp;w=300&amp;h=118" 
+        bar.set("photo", photo);
+        debugger;
+        bar.save(null, {
+          success: function(rating) {
+            // Execute any logic that should take place after the object is saved.
+            debugger
+          },
+          error: function(rating, error) {
+            // Execute any logic that should take place if the save fails.
+            // error is a Parse.Error with an error code and description.
+          }
+      });
+      }
+
+
+      // var bar = new Bar();
+      // bar.set("name", )
+
 
     },
 
@@ -148,7 +154,7 @@
           debugger;
           return barWithRating;
       });
-*/    debugger
+*/   
       query.first({
         success: function(object) {
           barWithRating.rating = object;
