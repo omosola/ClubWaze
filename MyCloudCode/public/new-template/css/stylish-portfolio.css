@@ -207,7 +207,7 @@ footer {
   color: #333;
   float:right;
   font-size: 24px;
-  margin-right: 10px;
+  margin-right: 40px;
 }
 
 .cellName {
@@ -250,3 +250,9 @@ footer {
   opacity: .8;
 }
 
+.gps_icon {
+  float: right;
+  margin:14px;
+  width:30px;
+  height:30px;
+}
