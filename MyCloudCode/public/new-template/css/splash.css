@@ -10,6 +10,16 @@
 	padding: 20px;
 }
 
+.beer-menu-icon {
+	background: url('../img/beer.png');
+	background-size: cover;
+	height: 100px;
+	width: 100px;
+	z-index: 1;
+	position: absolute;
+	right: 0;
+}
+
 .searchbox input[type='text'] {
 	background: rgba(255,255,255,0.5);
 	height: 50px;
