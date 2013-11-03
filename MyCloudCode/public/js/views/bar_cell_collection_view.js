@@ -21,7 +21,7 @@ $(function () {
 
       for(var i=0; i < this.collection.length; i++) {
         var bc = this.collection[i];
-        num += new Number(Math.random());
+        num += new Number(Math.random() * .3);
         bc.dist=num.toPrecision(2);
         if (bc.dist < 1) bc.dist = num.toPrecision(1);
         var bcv = new window.BarCellView(bc);
