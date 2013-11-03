@@ -46,7 +46,7 @@ html, body {
 .bar-info .details {
 	float: left;
 	width: 70%;
-	font-size: 1em;
+	font-size: .7em;
 }
 
 .ratings {
