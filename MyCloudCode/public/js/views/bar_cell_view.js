@@ -16,10 +16,7 @@
     template: _.template("<a href='barinfo.html?id=<%=id%>'><div class='bar-info' style='background-color:<%=color%>'> <div class='cellName'> <%=name%> </div> <div class='cellDist'> <%=dist%> <font size='2px'>mi</font> </div> </div></a>"),
 
 
-    initialize: function(){
-
-
-    },
+    initialize: function() {},
 
     render: function() {
       console.log(this);
