@@ -12,7 +12,8 @@
       bars: null,
     },
 
-    template: _.template(" <div class='bar-info'> <div> <%=name%> </div> <div> <%=dist%> </div> </div>"),
+
+    template: _.template("<a href='barinfo.html?id=y'><div class='bar-info'> <div> <%=name%> </div> <div> <%=dist%> </div> </div></a>"),
 
 
     initialize: function(){
