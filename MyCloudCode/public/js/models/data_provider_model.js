@@ -1,13 +1,15 @@
-(function ($) {
+(function () {
   "use strict";
-  DataProvider = Backbone.Model.extend({
+  window.DataProvider = Backbone.Model.extend({
 
     defaults: {
       googleAPIKey: "AIzaSyBICFlJOjrCgUc8gHbDfGlWZZzoQL26LL4",
       googleDataType: "json",
       description: "",
       author: "",
-      query: "bar"
+      query: "bar",
+      latitude: '37.4322',
+      longitude: '-122.16298'
     },
 
     initialize: function(){
@@ -16,47 +18,31 @@
     },
 
     getBarsNearGeolocation: function (attrs) {
-      // var map;
-      // var service;
-      // var infowindow;
-      // debugger;
+      var url = 'https://maps.googleapis.com/maps/api/place/nearbysearch/json?location='+this.get('latitude')+','+this.get('longitude')+'&radius=5000&types=bar&sensor=true&key='+this.get('googleAPIKey');
 
-      // var city = new google.maps.LatLng(-33.8665433,151.1956316); //pyrmont
-
-      // map = new google.maps.Map(document.getElementById('map'), {
-      //     mapTypeId: google.maps.MapTypeId.ROADMAP,
-      //     center: city,
-      //     zoom: 15 //TODO: change default
-      //   });
-
-      // var request = {
-      //   location: city,
-      //   radius: '500',
-      //   query: query
-      // };
-
-      // service = new google.maps.places.PlacesService(map);
-      // service.textSearch(request, callback);
-
+      $.getJSON(url,function(data, status){
+        alert("Data: " + data + "\nStatus: " + status);
+        console.log(data);
+      });
     },
 
-    // callback: function (results, status) {
-    //     if (status == google.maps.places.PlacesServiceStatus.OK) {
-    //       for (var i = 0; i < results.length; i++) {
-    //         var place = results[i];
-    //         console.log("place: ");
-    //         console.log(place);
-    //         //createMarker(results[i]);
-    //     }
-    //   }
-    // },
+
 
     getBarsInCity: function (attrs) {
+
       // attrs.cityName
       debugger;
       var cityName = "Palo+Alto";
-      var url = 'https://maps.googleapis.com/maps/api/place/textsearch/'+googleData+'?query=bars+in+'+cityName+'&sensor=true&key=' + googleAPIKey;
+      var url = 'https://maps.googleapis.com/maps/api/place/textsearch/';
+      url += this.get('googleDataType');
+      url += '?query=bars+in+'+cityName+'&sensor=true&key='+this.get('googleAPIKey');
 
+      console.log("hello peeps");
+
+      $.getJSON(url,function(data, status){
+        alert("Data: " + data + "\nStatus: " + status);
+        console.log(data);
+      });
 
     },
 
@@ -80,5 +66,5 @@
 
     } , 
   });
-}(jQuery));
+}());
 
