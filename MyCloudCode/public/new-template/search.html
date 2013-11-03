@@ -43,6 +43,7 @@
 
       function callback(results, status) {
         if (status == google.maps.places.PlacesServiceStatus.OK) {
+          results = DP.getBarCache();
           DP.set('bars', results);
           var barCellCollectionView = new window.BarCellCollectionView({collection : results});
 
