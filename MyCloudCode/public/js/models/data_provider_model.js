@@ -13,7 +13,13 @@
       bars: null,
     },
 
-    initialize: function(){},
+    initialize: function(){
+      Parse.$ = jQuery;
+
+      // Initialize Parse with your Parse application javascript keys
+      Parse.initialize("XkIQ36SN2LMpaSSQX2fMOLjqHP5PT72JFQ5nizHD",
+                       "EHgttht5UQd9XvvFHjIfy4XgVPKcVRFPd5zDcV0X");
+},
 
 /*
     getBarsNearGeolocation: function (attrs) {
@@ -79,26 +85,39 @@
       var Rating = Parse.Object.extend("Rating");
       var rating = new Rating();
 
-      var jsonRating = JSON.stringify(attrs);
-      //rating.set("barId", attrs.barId);
-      //if (attrs.genderRatio != null)
-      //    rating.set("genderRatio", attrs.genderRatio);
-      //if (attrs.attractiveness != null)
-      //    rating.set("attractiveness", attrs.attractiveness);
-      //if (attrs.peopleDancing != null)
-      //    rating.set("peopleDancing", attrs.peopleDancing);
-      //if (attrs.atmosphere != null)
-      //    rating.set("atmosphere", attrs.atmosphere);
-      //if (attrs.busyness != null)
-      //    rating.set("busyness", attrs.busyness);
-      //if (attrs.entryLine != null)
-      //    rating.set("entryLine", attrs.entryLine);
-      //if (attrs.coverCharge != null)
-      //    rating.set("coverCharge", attrs.coverCharge);
 
-      if (jsonRating != null) {
-        rating.save(jsonRating);
-      }
+      rating.set("barId", attrs.barId);
+      if (attrs.genderRatio != null)
+          rating.set("genderRatio", attrs.genderRatio);
+      if (attrs.attractiveness != null)
+          rating.set("attractiveness", attrs.attractiveness);
+      if (attrs.peopleDancing != null)
+          rating.set("peopleDancing", attrs.peopleDancing);
+      if (attrs.atmosphere != null)
+          rating.set("atmosphere", attrs.atmosphere);
+      if (attrs.busyness != null)
+          rating.set("busyness", attrs.busyness);
+      if (attrs.entryLine != null)
+          rating.set("entryLine", attrs.entryLine);
+      if (attrs.coverCharge != null)
+          rating.set("coverCharge", attrs.coverCharge);
+
+      rating.save(null, {
+          success: function(rating) {
+            // Execute any logic that should take place after the object is saved.
+            alert('New object created with objectId: ' + rating.id);
+          },
+          error: function(rating, error) {
+            // Execute any logic that should take place if the save fails.
+            // error is a Parse.Error with an error code and description.
+            alert('Failed to create new object, with error code: ' + error.description);
+          }
+      });
+
+      //var jsonRating = JSON.stringify(attrs);
+      //if (jsonRating != null) {
+      //  rating.save(jsonRating);
+      //}
     },
 
     getBarObjectForId: function (attrs) {
@@ -116,16 +135,26 @@
       }
 
       var Rating = Parse.Object.extend("Rating");
-      query = new Parse.Query(Rating);
+      var query = new Parse.Query(Rating);
+      query.equalTo("barId", attrs.barId);
+      query.descending("updatedAt");
+      query.first().then(function(object) {
+          barWithRating.rating = object;
+          debugger;
+          return barWithRating;
+      });
+/*
       query.first({
         success: function(object) {
           barWithRating.rating = object;
+          debugger;
+          alert(object.id + ' - ' + object.get('barId'));
         },
         error: function(error) {
+          alert("Error: " + error.code + " " + error.message);
         }
       });
-
-      return barWithRating;
+*/
     },
 
     //private methods
