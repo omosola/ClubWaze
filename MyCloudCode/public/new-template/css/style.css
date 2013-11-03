@@ -140,3 +140,8 @@ span.bigstars span.rateit-selected {
 span.bigstars button.rateit-reset {visibility: hidden;}
 span.bigstars span.rateit-reset:hover {}
 
+/* Vybers */
+#vybers {
+	float: right;
+}
+
