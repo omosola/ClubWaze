@@ -13,7 +13,7 @@
     },
 
 
-    template: _.template("<a href='barinfo.html?id=<%=id%>'><div class='bar-info' style='background-color:<%=color%>'> <div class='cellName'> <%=name%> </div> <div class='cellDist'> <%=dist%> </div> </div></a>"),
+    template: _.template("<a href='barinfo.html?id=<%=id%>'><div class='bar-info' style='background-color:<%=color%>'> <div class='cellName'> <%=name%> </div> <div class='cellDist'> <%=dist%> <font size='2px'>mi</font> </div> </div></a>"),
 
 
     initialize: function(){
@@ -30,8 +30,8 @@
       }
       var colorNum = rating*10 %2 ;
       var name = this.options.name;
-      if (name.length > 35) {
-        name = name.substring(0,35) + '...';
+      if (name.length > 28) {
+        name = name.substring(0,28) + '...';
       }
       return this.template({id: this.options.id, name: name, dist: this.options.dist, color:colors[colorNum]});
     },

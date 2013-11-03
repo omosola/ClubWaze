@@ -5,10 +5,6 @@ html, body {
 
 /* barinfo css */
 
-.header {
-	background: url(''); 
-}
-
 #top {
 	height: 100%;
 }
@@ -53,7 +49,6 @@ html, body {
 
 .ratings {
 	width: 100%;
-	height: 100%;
 	margin-top: 14px;
 	overflow: auto;
 }
@@ -78,8 +73,9 @@ html, body {
 }
 
 .rating .description {
-	position: absolute;
-	left: 25%;
+	margin-left: auto;
+	margin-right: auto;
+	position: relative;
 }
 
 .green-bg {
@@ -103,11 +99,11 @@ html, body {
 }
 
 button.save, button.checkin {
-	margin-top: 5px;
+	margin-top: 15px;
 	height: 50px;
 	width: 50%;
 	background-color: rgba(20,196,79,1);
-	opacity: 0.6;
+	opacity: 0.;
 	color: white;
 	border-radius: 2px;
 	border: none;
@@ -123,7 +119,43 @@ span.description {
 	overflow: auto;
 }
 
+.rate-text {
+	font-size: 11px;
+	color: #333;
+	margin-top: 15px;
+}
+
+.left-rate-text {
+	position: absolute;
+	left: 5px;
+}
+
+.icon {
+	position: absolute;
+	top: 5px;
+	left: 5px;
+	height: 50px;
+	width: 50px;
+	opacity: 0.2;
+}
+
+.money-icon {
+	background: url('../img/moneyicon.png');
+	background-size: 50px 50px;
+}
+
+.music-icon {
+	background: url('../img/musicicon.png');
+	background-size: 50px 50px;
+}
+
+.right-rate-text {
+	right: 5px;
+	position: absolute;
+}
+
 span.bigstars {
+	margin-top: 10px;
 }
 
 span.bigstars span.rateit-range {
