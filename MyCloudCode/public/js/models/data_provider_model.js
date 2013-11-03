@@ -120,7 +120,7 @@
       //}
     },
 
-    getBarObjectForId: function (attrs) {
+    getBarObjectForId: function (attrs, callbackWithBarRating) {
       var barWithRating = {};
       barWithRating.bar = null;
       barWithRating.rating = null;
@@ -138,23 +138,24 @@
       var query = new Parse.Query(Rating);
       query.equalTo("barId", attrs.barId);
       query.descending("updatedAt");
+/*
       query.first().then(function(object) {
           barWithRating.rating = object;
           debugger;
           return barWithRating;
       });
-/*
+*/
       query.first({
         success: function(object) {
           barWithRating.rating = object;
           debugger;
           alert(object.id + ' - ' + object.get('barId'));
+          callbackWithBarRating(barWithRating);
         },
         error: function(error) {
           alert("Error: " + error.code + " " + error.message);
         }
       });
-*/
     },
 
     //private methods
