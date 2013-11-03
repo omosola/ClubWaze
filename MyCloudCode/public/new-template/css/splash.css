@@ -2,7 +2,7 @@
 
 .header.splash {
 	/* use fully opaque image for the splash page */
-	background: url('../img/bg.jpg') no-repeat center center fixed;
+	background: url('../img/bg-2.jpg') no-repeat center center fixed;
 }
 
 #title {
