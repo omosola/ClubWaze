@@ -15,6 +15,7 @@
 
     initialize: function(){},
 
+/*
     getBarsNearGeolocation: function (attrs) {
       //TODO: we are seeding latitude and longitude
       var url = 'https://maps.googleapis.com/maps/api/place/nearbysearch/json?location='+this.get('latitude')+','+this.get('longitude')+'&radius=5000&types=bar&sensor=true&key='+this.get('googleAPIKey');
@@ -34,7 +35,30 @@
       this.set('bars', result['results'])
       return this.get('bars');
     },
+*/
 
+    getBarsNearGeolocation: function (attrs, callback) {
+      var map;
+      var service;
+
+      var pyrmont = new google.maps.LatLng(this.get('latitude'),this.get('longitude'));
+
+      map = new google.maps.Map(document.getElementById('map'), {
+          mapTypeId: google.maps.MapTypeId.ROADMAP,
+          center: pyrmont,
+          zoom: 15
+        });
+
+      var request = {
+        location: pyrmont,
+        radius: '5000',
+        types: ['bar']
+      };
+
+      service = new google.maps.places.PlacesService(map);
+      service.nearbySearch(request, callback);
+
+    },
 
 
     getBarsInCity: function (attrs) {
