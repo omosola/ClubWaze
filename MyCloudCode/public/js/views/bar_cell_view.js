@@ -13,7 +13,7 @@
     },
 
 
-    template: _.template("<a href='barinfo.html?id=<%=id%>'><div class='bar-info' style='background-color:<%=color%>'> <div class='cellName'> <%=name%> </div> <div class='cellDist'> <%=dist%> <font size='2px'>mi</font> </div><img class='gps_icon'src='img/gps_icon.png'/> </div></a>"),
+    template: _.template("<a href='barinfo.html?id=<%=id%>'><div class='bar-info' style='background-color:<%=color%>'> <div class='cellName'> <%=name%> </div> <div class='cellDist'> <%=dist%> <font size='2px'>mi</font> </div><img class='gps_icon'src='http://img.icbdr.com/images/m/seeker/gps_location_icon_v02.png'/> </div></a>"),
 
 
     initialize: function(){
