@@ -27,7 +27,7 @@ html, body {
 }
 
 .bar-info .title {
-	font-size: 3em;
+	font-size: 1.5em;
 }
 
 .bar-info .photo {
@@ -188,6 +188,7 @@ span.bigstars span.rateit-selected {
 span.bigstars button.rateit-reset {visibility: hidden;}
 span.bigstars span.rateit-reset:hover {}
 
+<<<<<<< HEAD
 span.bigstars.gender-rating span.rateit-range  {
 	background: url('../img/star-filled-gender44.png');
 }
@@ -199,8 +200,10 @@ span.bigstars.gender-rating span.rateit-hover  {
 span.bigstars.gender-rating span.rateit-selected {
 	background: url('../img/star-hover-gender44.png');
 }
-
+=======
 /* Vybers */
 #vybers {
 	float: right;
 }
+
+>>>>>>> 2f1955681697f151ce002957cf2ff5c6edb76d01
