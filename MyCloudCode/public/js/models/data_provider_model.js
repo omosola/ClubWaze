@@ -18,7 +18,6 @@
     getBarsNearGeolocation: function (attrs) {
       //TODO: we are seeding latitude and longitude
       var url = 'https://maps.googleapis.com/maps/api/place/nearbysearch/json?location='+this.get('latitude')+','+this.get('longitude')+'&radius=5000&types=bar&sensor=true&key='+this.get('googleAPIKey');
-      console.log(this);
 
       var result = "";
 
@@ -32,11 +31,7 @@
         data: {},
         async: false
        });
-      console.log(result['results']);
       this.set('bars', result['results'])
-
-      console.log("printing out the bars");  
-      console.log(this.get('bars'));
       return this.get('bars');
     },
 
@@ -50,10 +45,8 @@
       url += this.get('googleDataType');
       url += '?query=bars+in+'+cityName+'&sensor=true&key='+this.get('googleAPIKey');
 
-      console.log("hello peeps");
       $.getJSON(url,function(data, status){
         alert("Data: " + data + "\nStatus: " + status);
-        console.log(data);
       });
 
     },
