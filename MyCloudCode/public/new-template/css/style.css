@@ -64,8 +64,8 @@ html, body {
 .checkin {
 	height: 50px;
 	width: 80%;
-	background-color: blue;
-	opacity: 0.7;
+	background-color: #3b8bba;
+	opacity: 0.6;
 	color: white;
 	border-radius: 7px;
 }
