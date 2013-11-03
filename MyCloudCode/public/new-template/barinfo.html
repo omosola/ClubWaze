@@ -61,6 +61,13 @@
 
       function updateUIWithBarRating(barRating) {
        $('#barTitle').html(barRating.bar.name);
+       debugger
+       if (barRating.bar.name.length > 15 && barRating.bar.name.length < 25) {
+          $('#barTitle').css('font-size',18);
+       } else if (barRating.bar.name.length > 25) {
+          $('#barTitle').css('font-size',14);
+
+       }
        $('#address').html(barRating.bar.vicinity);
        $('#barPhoto').attr('src', pics[barRating.bar.rating *10 %6]);
 
