@@ -112,7 +112,6 @@ body {
   width: 100%;
   position: relative;
   background: url(../img/bg.JPG) no-repeat center center fixed; 
-  background-position: right top;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;

@@ -1,7 +1,12 @@
 #title {
 	font-family: 'Chelsea Market', cursive;
-	
 	font-size: 5em;
+	color: rgba(255,255,255,0.9);
+}
+
+h3 {
+	font-family: 'Helvetica', sans-serif;
+	color: rgba(150,150,150,1);
 }
 
 /* Search.HTML */
@@ -48,10 +53,10 @@
 
 a {
 	text-decoration: none;
-	color: black;
+	color: inherit;
 }
 
 a:hover, a:visited {
 	text-decoration: none;
-	color: black;
+	color: inherit;
 }
