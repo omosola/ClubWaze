@@ -129,7 +129,7 @@
       barWithRating.bar = null;
       barWithRating.rating = null;
 
-      var barList =  this.get('bars');
+      var barList =  this.getBarCache();//this.get('bars');
       for (var i = 0; i < barList.length; i++) { 
         var bar = barList[i];
         if (bar.id == attrs.barId) {
@@ -148,11 +148,11 @@
           debugger;
           return barWithRating;
       });
-*/
+*/    debugger
       query.first({
         success: function(object) {
           barWithRating.rating = object;
-          debugger;
+
           alert(object.id + ' - ' + object.get('barId'));
           callbackWithBarRating(barWithRating);
         },
