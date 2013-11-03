@@ -80,7 +80,7 @@ html, body {
 }
 
 .green-bg {
-	background-color: rgba(40,180,141,1);
+	background-color: rgba(40,180,141,0.7);
 }
 
 .pink-bg {
@@ -113,3 +113,27 @@ button.save, button.checkin {
 button.save {
 	background-color: rgba(0,151,252,1);
 }
+
+/* Rating.HTML */
+span.description {
+	position: relative;
+	overflow: auto;
+}
+
+span.bigstars {
+}
+
+span.bigstars span.rateit-range {
+	background: url('../img/star-filled44.png');
+	height: 44px;
+}
+span.bigstars span.rateit-hover {
+	background: url('../img/star-hover44.png');
+}
+span.bigstars span.rateit-selected {
+	background: url('../img/star-hover44.png');
+
+}
+span.bigstars button.rateit-reset {visibility: hidden;}
+span.bigstars span.rateit-reset:hover {}
+
