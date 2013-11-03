@@ -42,6 +42,7 @@
 
       function callback(results, status) {
         if (status == google.maps.places.PlacesServiceStatus.OK) {
+          results = DP.getBarCache();
           DP.set('bars', results);
           var barCellCollectionView = new window.BarCellCollectionView({collection : results});
 
@@ -61,32 +62,6 @@
       <div id="map" class="fade-trigger">
       </div>
       <div id="bar-info-container" class="fade-trigger">
-        <div class="bar-info">
-          <a href="barinfo.html">
-              <div class="bar-info">
-                Nola's Palo Alto
-              </div>
-          </a>
-        </div>
-        <div class="bar-info">
-          Bar Info B
-        </div>
-        <div class="bar-info">
-          Bar Info C
-        </div>
-              <div class="bar-info">
-          Bar Info D
-        </div>
-        <div class="bar-info">
-          Bar Info E
-        </div>
-        <div class="bar-info">
-          Bar Info F
-        </div>
-        <div class="bar-info">
-          Bar Info G
-        </div>
-
       </div>
     </div>
     <!-- /Full Page Image Header Area -->
