@@ -1,12 +1,55 @@
+/* Splas.HTML */
 #title {
-	font-family: 'Chelsea Market', cursive;
+	font-family: 'CodyStar', cursive;
 	font-size: 5em;
-	color: rgba(255,255,255,0.9);
+	margin-top: -60px;
+	color: rgba(255,255,255,0.8);
 }
 
 h3 {
-	font-family: 'Helvetica', sans-serif;
-	color: rgba(150,150,150,1);
+	font-family: 'Lato', sans-serif;
+	font-weight: 300;
+	margin-top: 5px;
+	color: rgba(255,255,255,0.8);
+}
+
+#menu {
+	height: 200px;
+	width: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-color: rgba(0,0,0,0.4);
+	display: none;
+}
+
+.beer-menu-icon {
+	background: url('../img/beer.png');
+	background-size: cover;
+	height: 100px;
+	width: 100px;
+	z-index: 2;
+	position: absolute;
+	right: 0;
+}
+
+.splash-search input[type=text] {
+	margin-top: 10px;
+	width: 300px;
+	height: 40px;
+	background: rgba(255,255,255,0.3);
+	border: 2px solid rgba(255,255,255,0.4);
+	border-radius: 15px;
+	font-family: 'Lato', sans-serif;
+	font-weight: 300;
+	text-transform: uppercase;
+	font-size: 20px;
+	color: white;
+	padding-left: 10px;
+
+	background: url('../img/searchicon.png') no-repeat;
+	background-size: 26px 26px;
+	background-position: right 5px top 5px;
 }
 
 /* Search.HTML */
@@ -15,18 +58,9 @@ h3 {
 	padding: 20px;
 }
 
-.beer-menu-icon {
-	background: url('../img/beer.png');
-	background-size: cover;
-	height: 100px;
-	width: 100px;
-	z-index: 1;
-	position: absolute;
-	right: 0;
-}
 
 .searchbox input[type='text'] {
-	background: rgba(255,255,255,0.5);
+	background: rgba(255,255,255,0.8);
 	height: 50px;
 	margin-bottom: 20px;
 }
@@ -43,12 +77,12 @@ h3 {
 .bar-info {
 	width: 100%;
 	height: 60px;
-	background: rgba(255,255,255,0.3);
+	background: rgba(255,255,255,0.5);
 	border: 1px solid black;
 }
 
 .bar-info:hover {
-	background-color: rgba(0,0,0,0.1)
+	background-color: rgba(155,155,155,0.8)
 }
 
 a {
