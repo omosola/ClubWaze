@@ -65,11 +65,15 @@ html, body {
 	text-align: center;
 }
 
+.edit .rating {
+	border: 2px dotted #666;
+}
+
 .clearfix {
 	clear: both;
 }
 
-.checkin {
+button.save, button.checkin {
 	margin-top: 5px;
 	height: 50px;
 	width: 50%;
@@ -78,4 +82,8 @@ html, body {
 	color: white;
 	border-radius: 2px;
 	border: none;
+}
+
+button.save {
+	background-color: rgba(0,151,252,1);
 }
