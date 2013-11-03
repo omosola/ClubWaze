@@ -100,9 +100,7 @@ html, body {
 }
 
 button.save, button.checkin {
-	margin-top: 15px;
 	height: 50px;
-	width: 50%;
 	background-color: rgba(20,196,79,1);
 	opacity: 0.;
 	color: white;
@@ -110,8 +108,14 @@ button.save, button.checkin {
 	border: none;
 }
 
+button.checkin {
+	margin-top: 15px;
+	width: 50%;
+}
+
 button.save {
 	background-color: rgba(0,151,252,1);
+	width: 100%;
 }
 
 /* Rating.HTML */
@@ -150,6 +154,16 @@ span.description {
 	background-size: 50px 50px;
 }
 
+.attractiveness-icon {
+	background: url('../img/musicicon.png');
+	background-size: 50px 50px;
+}
+
+.atmosphere-icon {
+	background: url('../img/musicicon.png');
+	background-size: 50px 50px;
+}
+
 .right-rate-text {
 	right: 5px;
 	position: absolute;
@@ -173,3 +187,14 @@ span.bigstars span.rateit-selected {
 span.bigstars button.rateit-reset {visibility: hidden;}
 span.bigstars span.rateit-reset:hover {}
 
+span.bigstars.gender-rating span.rateit-range  {
+	background: url('../img/star-filled-gender44.png');
+}
+
+span.bigstars.gender-rating span.rateit-hover  {
+	background: url('../img/star-hover-gender44.png');
+}
+
+span.bigstars.gender-rating span.rateit-selected {
+	background: url('../img/star-hover-gender44.png');
+}
