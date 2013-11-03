@@ -16,8 +16,8 @@
       Parse.$ = jQuery;
 
       // Initialize Parse with your Parse application javascript keys
-      Parse.initialize("gu19AcrasUTI2OpNDzU3uooPniNnpec74nUKoUcx",
-                       "GDkZhESUr5x1RqZhZwIX8aZfPS6PLX2PE8mD6D84");
+      Parse.initialize("XkIQ36SN2LMpaSSQX2fMOLjqHP5PT72JFQ5nizHD",
+                       "EHgttht5UQd9XvvFHjIfy4XgVPKcVRFPd5zDcV0X");
 },
 
 
@@ -47,22 +47,45 @@
 
     saveBarsToParse: function () {
       var Bar = Parse.Object.extend("Bar");
+      var Rating = Parse.Object.extend("Rating");
 
       for (var i=0; i < this.get("bars").length; i++) {
         var cur = this.get("bars")[i];
         var bar = new Bar();
         bar.set("name", cur['name']);
-        bar.set("googleId", cur['id']);
+        bar.set("id", cur['id']);
         bar.set("address", cur['vicinity']);
         var photo = "https://cbks1.google.com/cbk?output=thumbnail&amp;cb_client=maps_sv&amp;thumb=2&amp;thumbfov=100&amp;ll=37.444870,-122.161514&amp;panoid=wt8GV462yvSiMGF6aQLAww&amp;yaw=45.8&amp;pitch=7.4&amp;thumbpegman=1&amp;w=300&amp;h=118" 
         bar.set("photo", photo);
         debugger;
         bar.save(null, {
-          success: function(rating) {
+          success: function(bar) {
             // Execute any logic that should take place after the object is saved.
+
+            var rating = new Rating();
+            rating.set("barId", bar.id);
+            rating.set("attractiveness", Math.floor(Math.random()*5)+1);
+            rating.set("busyness", Math.floor(Math.random()*5)+1);
+            rating.set("peopleDancing", Math.floor(Math.random()*5)+1);
+            rating.set("atmosphere", Math.floor(Math.random()*5)+1);
+            rating.set("entryLine", Math.floor(Math.random()*5)+1);
+            rating.set("coverCharge", Math.floor(Math.random()*2)+1);
+            rating.save(null, {
+                success: function(rating) {
+                  // Execute any logic that should take place after the object is saved.
+                  // alert('New object created with objectId: ' + rating.id);
+                },
+                error: function(rating, error) {
+                  // Execute any logic that should take place if the save fails.
+                  // error is a Parse.Error with an error code and description.
+                  // alert('Failed to create new object, with error code: ' + error.description);
+                }
+            });
+
+
             debugger
           },
-          error: function(rating, error) {
+          error: function(bar, error) {
             // Execute any logic that should take place if the save fails.
             // error is a Parse.Error with an error code and description.
           }
