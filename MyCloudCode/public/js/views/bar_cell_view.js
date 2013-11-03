@@ -12,7 +12,7 @@
       bars: null,
     },
 
-    template: _.template(" <div class='bar-info'> <div> Name </div> <div> dist </div> </div>"),
+    template: _.template(" <div class='bar-info'> <div> <%=name%> </div> <div> dist </div> </div>"),
 
 
     initialize: function(){
@@ -21,7 +21,8 @@
     },
 
     render: function() {
-      return this.template({who: 'world!'});
+      console.log(this);
+      return this.template({name: this.options.name, });
     },
 
 
