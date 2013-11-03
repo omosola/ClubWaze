@@ -30,8 +30,8 @@
       }
       var colorNum = rating*10 %2 ;
       var name = this.options.name;
-      if (name.length > 28) {
-        name = name.substring(0,28) + '...';
+      if (name.length > 25) {
+        name = name.substring(0,25) + '...';
       }
       return this.template({id: this.options.id, name: name, dist: this.options.dist, color:colors[colorNum]});
     },
