@@ -102,7 +102,7 @@
       });
 
       return barWithRating;
-    }
+    },
 
     //private methods
     addUserInput: function(attrs) {
