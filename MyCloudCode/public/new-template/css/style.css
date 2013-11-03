@@ -23,6 +23,7 @@ html, body {
 .bar-info {
 	overflow: hidden;
 	color: #999;
+	max-height: 120px;
 }
 
 .bar-info .title {
@@ -36,8 +37,8 @@ html, body {
 
 .bar-info .photo img {
 	margin-right: 20px;
-	width: 100px;
-	height: 100px;
+	width: 80px;
+	height: 80px;
 	min-height: 130px;
 	background-color: rgba(0,0,0,0.2);
 }
