@@ -46,6 +46,7 @@
     },
 
     saveBarsToParse: function () {
+      return;
       var Bar = Parse.Object.extend("Bar");
       var Rating = Parse.Object.extend("Rating");
 
@@ -53,7 +54,7 @@
         var cur = this.get("bars")[i];
         var bar = new Bar();
         bar.set("name", cur['name']);
-        bar.set("id", cur['id']);
+        bar.set("googleId", cur['id']);
         bar.set("address", cur['vicinity']);
         var photo = "https://cbks1.google.com/cbk?output=thumbnail&amp;cb_client=maps_sv&amp;thumb=2&amp;thumbfov=100&amp;ll=37.444870,-122.161514&amp;panoid=wt8GV462yvSiMGF6aQLAww&amp;yaw=45.8&amp;pitch=7.4&amp;thumbpegman=1&amp;w=300&amp;h=118" 
         bar.set("photo", photo);
@@ -63,7 +64,8 @@
             // Execute any logic that should take place after the object is saved.
 
             var rating = new Rating();
-            rating.set("barId", bar.id);
+            debugger
+            rating.set("barId", bar.attributes.googleId);
             rating.set("attractiveness", Math.floor(Math.random()*5)+1);
             rating.set("busyness", Math.floor(Math.random()*5)+1);
             rating.set("peopleDancing", Math.floor(Math.random()*5)+1);
