@@ -50,15 +50,12 @@
         updateUIWithBarRating(barRating);
       }
 
-      var pics = ['http://upload.wikimedia.org/wikipedia/commons/1/1b/De_Hems_bar.jpg', 'http://drunkgoodideasoberbadidea.files.wordpress.com/2012/06/bar.jpg','http://atcheers.com/wp-content/uploads/2013/02/modern-bar.jpg'];
+      var pics = ['http://upload.wikimedia.org/wikipedia/commons/1/1b/De_Hems_bar.jpg', 'http://drunkgoodideasoberbadidea.files.wordpress.com/2012/06/bar.jpg','http://atcheers.com/wp-content/uploads/2013/02/modern-bar.jpg', 'http://www.shakedownbarvail.com/wp-content/uploads/2012/10/Shakedown-Bar-Vail-Main-Bar-Shot.jpg', 'http://nyulocal.com/wp-content/uploads/2013/02/pub-bar1.jpg', 'http://www.cameldive.com/siteimages/slideshow-bar-01.jpg' ];
 
       function updateUIWithBarRating(barRating) {
        $('#barTitle').html(barRating.bar.name);
        $('#address').html(barRating.bar.vicinity);
-       $('#barPhoto').attr('src', pics[Math.floor(Math.random()*3)]);
-
-       debugger
-       console.log("in update");
+       $('#barPhoto').attr('src', pics[barRating.bar.rating *10 %6]);
       }
 
     </script>
@@ -87,22 +84,22 @@
         </div>
         <div class="clearfix"></div>
         <div class="ratings">
-          <div class="rating">
+          <div id="genderRatio" class="rating">
 
           </div>
-          <div class="rating">
+          <div id="coverCharge" class="rating">
               
           </div>
-          <div class="rating">
+          <div id="busyness" class="rating">
               
           </div>
-          <div class="rating">
+          <div id="entryLine" class="rating">
               
           </div>
-          <div class="rating">
+          <div id="attractiveness"class="rating">
               
           </div>
-          <div class="rating">
+          <div id="entryLine"class="rating">
               
           </div>
         </div>
