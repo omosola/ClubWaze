@@ -47,7 +47,20 @@
       function callbackWithBarRating(barRating) {
         debugger
         console.log("In callback: barRating: " + barRating);
+        updateUIWithBarRating(barRating);
       }
+
+      var pics = ['http://upload.wikimedia.org/wikipedia/commons/1/1b/De_Hems_bar.jpg', 'http://drunkgoodideasoberbadidea.files.wordpress.com/2012/06/bar.jpg','http://atcheers.com/wp-content/uploads/2013/02/modern-bar.jpg'];
+
+      function updateUIWithBarRating(barRating) {
+       $('#barTitle').html(barRating.bar.name);
+       $('#address').html(barRating.bar.vicinity);
+       $('#barPhoto').attr('src', pics[Math.floor(Math.random()*3)]);
+
+       debugger
+       console.log("in update");
+      }
+
     </script>
   </head>
 
@@ -59,17 +72,17 @@
       <div class="content">
         <div class="bar-info">
           <div class="details">
-            <div class="title">Nola's Palo Alto</div>
+            <div id="barTitle" class="title">Nola's Palo Alto</div>
             <div class="contact">
-              <div class="address">535 Ramona St Palo Alto, CA</div>
+              <div id="address" class="address">535 Ramona St Palo Alto, CA</div>
               <div class="phone">(650) 328-2722</div>
             </div>
             <button class="checkin" onclick="window.location = 'rating.html'">
               CHECK IN
             </button>
           </div>
-          <div class="photo retro">
-            <img src="http://recreationxleisure.com/wp-content/uploads/2013/03/Kids-Birthday-Party-Supplies.jpg" />
+          <div  class="photo retro">
+            <img id="barPhoto" src="http://recreationxleisure.com/wp-content/uploads/2013/03/Kids-Birthday-Party-Supplies.jpg" />
           </div>
         </div>
         <div class="clearfix"></div>
