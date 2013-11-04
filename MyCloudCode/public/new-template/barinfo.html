@@ -111,6 +111,7 @@
             <button class="checkin" onclick="goto_rating()">
               SHAPE IT
             </button>
+            <div class="money-bag"></div>
           </div>
           <div  class="photo retro">
             <img id="barPhoto" src="" />
@@ -150,6 +151,9 @@
             </div>
           </div>
         </div>
+            <button class="search" onclick="goto_search()">
+              SEARCH FOR MORE
+            </button>
       </div>
     </div>
     <!-- /Full Page Image Header Area -->
@@ -158,6 +162,11 @@
   <!-- Placed at the end of the document so the pages load faster -->
   <script src="http://codeorigin.jquery.com/jquery-2.0.3.min.js"></script>
   <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.1/js/bootstrap.min.js"></script>
+  <script>
+    function goto_search() {
+      window.location = "search.html";
+    }
+  </script>
   </body>
 
 </html>
