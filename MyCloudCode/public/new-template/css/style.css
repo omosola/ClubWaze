@@ -145,6 +145,16 @@ span.description {
 	opacity: 0.2;
 }
 
+.man-icon {
+	background: url('../img/man.png');
+	background-size: 45px 50px;
+}
+
+.woman-icon {
+	background: url('../img/woman.png');
+	background-size: 50px 50px;
+}
+
 .money-icon {
 	background: url('../img/moneyicon.png');
 	background-size: 50px 50px;
@@ -163,6 +173,15 @@ span.description {
 .atmosphere-icon {
 	background: url('../img/musicicon.png');
 	background-size: 50px 50px;
+}
+
+.right-rate-icon {
+	position: absolute;
+	right: 5px;
+	top: 5px;
+	height: 50px;
+	width: 50px;
+	opacity: 0.2;
 }
 
 .right-rate-text {
