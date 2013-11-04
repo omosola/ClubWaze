@@ -146,7 +146,7 @@ span.description {
 
 .man-icon {
 	background: url('../img/man.png');
-	background-size: 45px 50px;
+	background-size: 50px 50px;
 }
 
 .woman-icon {
@@ -154,8 +154,18 @@ span.description {
 	background-size: 50px 50px;
 }
 
-.money-icon {
-	background: url('../img/moneyicon.png');
+.empty-icon {
+	background: url('../img/empty.png');
+	background-size: 50px 50px;
+}
+
+.dance-icon {
+	background: url('../img/dance.png');
+	background-size: 50px 50px;
+}
+
+.crowd-icon {
+	background: url('../img/crowd.jpeg');
 	background-size: 50px 50px;
 }
 
@@ -164,8 +174,8 @@ span.description {
 	background-size: 50px 50px;
 }
 
-.attractiveness-icon {
-	background: url('../img/musicicon.png');
+.attractive-icon {
+	background: url('../img/attractive.png');
 	background-size: 50px 50px;
 }
 
