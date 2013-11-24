@@ -16,9 +16,12 @@
       Parse.$ = jQuery;
 
       // Initialize Parse with your Parse application javascript keys
-      Parse.initialize("XkIQ36SN2LMpaSSQX2fMOLjqHP5PT72JFQ5nizHD",
-                       "EHgttht5UQd9XvvFHjIfy4XgVPKcVRFPd5zDcV0X");
+      // Parse.initialize("XkIQ36SN2LMpaSSQX2fMOLjqHP5PT72JFQ5nizHD",
+      //                  "EHgttht5UQd9XvvFHjIfy4XgVPKcVRFPd5zDcV0X");
+      Parse.initialize("gu19AcrasUTI2OpNDzU3uooPniNnpec74nUKoUcx",
+                       "GDkZhESUr5x1RqZhZwIX8aZfPS6PLX2PE8mD6D84");
 },
+
 
 
 
@@ -54,7 +57,7 @@
         var cur = this.get("bars")[i];
         var bar = new Bar();
         bar.set("name", cur['name']);
-        bar.set("googleId", cur['id']);
+        bar.set("googleId", cur['googleId']);
         bar.set("address", cur['vicinity']);
         var photo = "https://cbks1.google.com/cbk?output=thumbnail&amp;cb_client=maps_sv&amp;thumb=2&amp;thumbfov=100&amp;ll=37.444870,-122.161514&amp;panoid=wt8GV462yvSiMGF6aQLAww&amp;yaw=45.8&amp;pitch=7.4&amp;thumbpegman=1&amp;w=300&amp;h=118" 
         bar.set("photo", photo);
